@@ -1,0 +1,11 @@
+name: deploy to locak k8 
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:  
+jobs:
+  checkout:
+    runs-on: ubuntu:latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v3 
